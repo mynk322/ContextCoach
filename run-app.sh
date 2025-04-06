@@ -44,19 +44,19 @@ fi
 
 # Start the Spring Boot backend
 echo "Starting Spring Boot backend..."
-cd ContextCoach
+cd ContextCoach1
 # Create logs directory if it doesn't exist
 mkdir -p logs
 
 # Check if Maven wrapper exists
 if [ -f "./mvnw" ]; then
   chmod +x ./mvnw
-  ./mvnw spring-boot:run -Dspring-boot.run.main-class=com.contextcoach.ContextCoachApplication &
+  ./mvnw spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.port=8084" -Dspring-boot.run.main-class=com.contextcoach.ContextCoachApplication &
   BACKEND_PID=$!
   echo "Backend started with PID: $BACKEND_PID"
 # Check if Maven is installed
 elif command -v mvn &> /dev/null; then
-  mvn spring-boot:run -Dspring-boot.run.main-class=com.contextcoach.ContextCoachApplication &
+  mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.port=8084" -Dspring-boot.run.main-class=com.contextcoach.ContextCoachApplication &
   BACKEND_PID=$!
   echo "Backend started with PID: $BACKEND_PID"
 else
@@ -80,7 +80,7 @@ echo "Backend initialization time complete. Proceeding with frontend startup."
 
 # Start the React frontend
 echo "Starting React frontend..."
-cd ../feature-clarify-analyze
+cd ../feature-clarify-analyze1
 # Check if node_modules exists, if not run npm install
 if [ ! -d "node_modules" ]; then
   echo "Node modules not found. Running npm install..."

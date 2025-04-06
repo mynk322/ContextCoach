@@ -571,3 +571,62 @@ Caused by: java.net.SocketException: Network is unreachable
 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
 	... 69 common frames omitted
+2025-04-06 11:58:25,693 ERROR [main] c.c.cli.FeatureComplexityCLI: No feature description provided
+2025-04-06 11:58:35,386 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2025-04-06 11:58:48,161 ERROR [main] c.c.cli.FeatureComplexityCLI: No feature description provided
+2025-04-06 12:00:05,866 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8083 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8083 or configure this application to listen on another port.
+
+2025-04-06 12:01:08,702 ERROR [main] c.c.cli.FeatureComplexityCLI: No feature description provided
+2025-04-06 12:02:08,262 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8084 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8084 or configure this application to listen on another port.
+
+2025-04-06 12:03:05,752 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8084 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8084 or configure this application to listen on another port.
+
