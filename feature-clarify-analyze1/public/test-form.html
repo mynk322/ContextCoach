@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test API Endpoint</h1>
+    
+    <form id="testForm">
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="Test Title">
+        </div>
+        
+        <div>
+            <label for="content">Content:</label>
+            <textarea id="content" name="content">This is a test content.</textarea>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+    <div id="response"></div>
+    
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const responseDiv = document.getElementById('response');
+            
+            // Create FormData
+            const formData = new FormData();
+            formData.append('title', title);
+            formData.append('content', content);
+            
+            // Show loading
+            responseDiv.textContent = 'Sending request...';
+            
+            // Send the request
+            fetch('/contextcoach/api/requirements/text', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                responseDiv.textContent = `Status: ${response.status} ${response.statusText}\n\n`;
+                
+                if (response.ok) {
+                    return response.json().then(data => {
+                        responseDiv.textContent += JSON.stringify(data, null, 2);
+                    }).catch(err => {
+                        responseDiv.textContent += 'Response is not JSON: ' + err.message;
+                        return response.text().then(text => {
+                            responseDiv.textContent += '\n\nRaw response: ' + text;
+                        });
+                    });
+                } else {
+                    responseDiv.textContent += 'Request failed';
+                    return response.text().then(text => {
+                        if (text) {
+                            responseDiv.textContent += '\n\nResponse: ' + text;
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                responseDiv.textContent = 'Error: ' + error.message;
+            });
+        });
+    </script>
+</body>
+</html> 

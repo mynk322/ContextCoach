@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContextCoach - AI-powered Requirement Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background-color: #f8f9fa;
+            padding: 5rem 0;
+            margin-bottom: 2rem;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">ContextCoach</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#api">API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1 class="display-4">ContextCoach</h1>
+            <p class="lead">AI-powered requirement analysis tool for software development teams</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+                <a href="#upload" class="btn btn-primary btn-lg px-4 gap-3">Upload Requirement</a>
+                <a href="#create" class="btn btn-outline-secondary btn-lg px-4">Create Requirement</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container" id="features">
+        <h2 class="text-center mb-5">Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">📝</div>
+                        <h3 class="card-title">Requirement Analysis</h3>
+                        <p class="card-text">Upload requirements from various file formats or enter them directly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">🔍</div>
+                        <h3 class="card-title">Ambiguity Detection</h3>
+                        <p class="card-text">Identify vague or unclear specifications in requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">⏱️</div>
+                        <h3 class="card-title">Scope Estimation</h3>
+                        <p class="card-text">Get time and complexity estimates for implementing requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">📋</div>
+                        <h3 class="card-title">Implementation Planning</h3>
+                        <p class="card-text">Generate detailed implementation plans with steps and technical approaches.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">🎫</div>
+                        <h3 class="card-title">Jira Integration</h3>
+                        <p class="card-text">Create Jira tickets based on analyzed requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">👨‍💻</div>
+                        <h3 class="card-title">Developer Profiles</h3>
+                        <p class="card-text">Manage developer profiles with skills and productivity factors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="container mt-5" id="upload">
+        <h2 class="text-center mb-4">Upload Requirement</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/contextcoach/api/requirements/upload" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Requirement Title</label>
+                                <input type="text" class="form-control" id="title" name="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="file" class="form-label">Requirement File</label>
+                                <input type="file" class="form-control" id="file" name="file" required>
+                                <div class="form-text">Supported formats: PDF, TXT, JSON, Excel</div>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Upload and Analyze</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Section -->
+    <section class="container mt-5" id="create">
+        <h2 class="text-center mb-4">Create Requirement</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/contextcoach/api/requirements/text" method="post">
+                            <div class="mb-3">
+                                <label for="createTitle" class="form-label">Requirement Title</label>
+                                <input type="text" class="form-control" id="createTitle" name="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="content" class="form-label">Requirement Content</label>
+                                <textarea class="form-control" id="content" name="content" rows="6" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Create and Analyze</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section -->
+    <section class="container mt-5" id="api">
+        <h2 class="text-center mb-4">API Documentation</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <p>ContextCoach provides a comprehensive REST API for integrating with your development workflow. Check out our <a href="https://github.com/yourusername/context-coach">GitHub repository</a> for detailed API documentation.</p>
+                        
+                        <h5 class="mt-4">Example API Endpoints:</h5>
+                        <ul>
+                            <li><code>POST /api/requirements/upload</code> - Upload a requirement file</li>
+                            <li><code>POST /api/requirements/{id}/analyze</code> - Analyze a requirement for ambiguities</li>
+                            <li><code>POST /api/requirements/{id}/estimate</code> - Estimate the scope of a requirement</li>
+                            <li><code>POST /api/jira/tickets</code> - Create a Jira ticket from a requirement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container mt-5" id="about">
+        <h2 class="text-center mb-4">About ContextCoach</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <p>ContextCoach is an AI-powered requirement analysis tool that helps software development teams analyze, clarify, and estimate requirements. It uses RabbitHole's Claude models to detect ambiguities, estimate scope, and generate implementation plans for software requirements.</p>
+                        
+                        <p>Our mission is to improve the quality of software requirements and reduce the time and effort required to understand and implement them. By leveraging the power of AI, we help development teams deliver better software faster.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 ContextCoach. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

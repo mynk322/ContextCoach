@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a25c720-460f-432b-870a-3bb3825cd204" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/controller/JiraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/controller/JiraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/model/DeveloperProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/model/DeveloperProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/model/Requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/model/Requirement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/repository/DeveloperProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/repository/DeveloperProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/repository/JiraTicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/repository/JiraTicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/repository/RequirementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/repository/RequirementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/service/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/service/JiraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/service/JiraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/service/RabbitHoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/service/RabbitHoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/contextcoach/service/RequirementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/contextcoach/service/RequirementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/contextcoach/service/FileServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/contextcoach/service/FileServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/contextcoach/service/RabbitHoleServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/contextcoach/service/RabbitHoleServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2vGjtUtx9sfBnbJ63kUSW8ywUYv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.RabbitHoleServiceTest.executor": "Run",
+    "JUnit.RabbitHoleServiceTest.testDetectAmbiguities.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.RabbitHoleServiceTest.testDetectAmbiguities">
+    <configuration name="RabbitHoleServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="context-coach" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.contextcoach.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.contextcoach.service" />
+      <option name="MAIN_CLASS_NAME" value="com.contextcoach.service.RabbitHoleServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitHoleServiceTest.testDetectAmbiguities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="context-coach" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.contextcoach.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.contextcoach.service" />
+      <option name="MAIN_CLASS_NAME" value="com.contextcoach.service.RabbitHoleServiceTest" />
+      <option name="METHOD_NAME" value="testDetectAmbiguities" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RabbitHoleServiceTest.testDetectAmbiguities" />
+        <item itemvalue="JUnit.RabbitHoleServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a25c720-460f-432b-870a-3bb3825cd204" name="Changes" comment="" />
+      <created>1743778519523</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743778519523</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/contextcoach/service/RabbitHoleServiceTest.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/contextcoach/service/RabbitHoleService.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
